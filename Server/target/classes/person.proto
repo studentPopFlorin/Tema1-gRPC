@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_package = "proto";
+
+service PersonDetails {
+  rpc GetDetails (PersonRequest) returns (DetailsReply) {}
+}
+
+message PersonRequest {
+  string name = 1;
+  string cnp=2;
+}
+
+message DetailsReply {
+  string message = 1;
+}
